@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
 
 # HAL
 PRODUCT_PACKAGES += \
-    AdvancedDisplay \
     vendor.lineage.livedisplay@2.0-service.samsung \
     android.hardware.graphics.allocator@2.0-impl-exynos4 \
     android.hardware.graphics.mapper@2.0-impl-exynos4 \
