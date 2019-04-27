@@ -37,10 +37,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.recovery.smdk4210.rc:root/init.recovery.smdk4210.rc
 
-# Netflix hack
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/98netflix:system/etc/init.d/98netflix
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/tinyalsa-audio.xml:system/etc/tinyalsa-audio.xml \
@@ -205,8 +201,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_atlas=true
 
-#PRODUCT_PACKAGES += \
-#    SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
