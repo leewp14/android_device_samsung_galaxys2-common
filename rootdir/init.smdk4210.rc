@@ -372,7 +372,7 @@ on boot
     write /proc/sys/vm/page-cluster 0
 
 # For RIL
-service cpboot-daemon /sbin/cbd -d -p 8
+service cpboot-daemon /system/bin/cbd -d -p 8
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r
@@ -397,6 +397,3 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service macloader /system/bin/macloader
-    class main
-    oneshot
