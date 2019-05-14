@@ -375,8 +375,7 @@ on boot
 service cpboot-daemon /system/bin/cbd -d -p 8
     class main
     user root
-    group radio cache inet misc audio sdcard_rw log sdcard_r
-    seclabel u:r:cpboot-daemon:s0
+    group radio cache inet misc audio sdcard_rw log
 
 service charger /charger
     class charger
