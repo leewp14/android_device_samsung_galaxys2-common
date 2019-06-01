@@ -175,5 +175,9 @@ WITH_LINEAGE_CHARGER := false
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.exynos4
 
+# Telephony
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/galaxys2-common/BoardConfigVendor.mk
