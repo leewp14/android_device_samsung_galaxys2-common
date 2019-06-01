@@ -211,4 +211,8 @@
     <!-- Enable button brightness -->
     <bool name="config_button_brightness_support">true</bool>
     <integer name="config_button_brightness_default">128</integer>    
+
+    <!-- Burn In protection. This should be enabled on devices that have OLED displays -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
 </resources>
