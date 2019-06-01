@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.keydisabler;
+package com.android.keydisabler;
 
 /*
  * Disable capacitive keys
