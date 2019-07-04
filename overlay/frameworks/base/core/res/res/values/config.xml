@@ -142,8 +142,11 @@
         <item>"/system/framework/boot-core-libart.vdex"</item>   <!--  2.754.164 -->
     </string-array>
 
+    <!-- Keep chosen default camera app pinned in memory for faster launching -->
+    <bool name="config_pinnerCameraApp">false</bool>
+
     <!-- Keep home app pinned in memory for faster launching -->
-    <bool name="config_pinnerHomeApp">true</bool>
+    <bool name="config_pinnerHomeApp">false</bool>
 
     <!-- Whether UI for multi user should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
