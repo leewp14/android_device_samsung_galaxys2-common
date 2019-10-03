@@ -33,6 +33,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_64_BIT_BINDER := true
 
+BOARD_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
+BOARD_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
+
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos4
 TARGET_SOC := exynos4210
