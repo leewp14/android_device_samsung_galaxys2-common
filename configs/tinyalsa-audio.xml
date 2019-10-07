@@ -49,7 +49,7 @@
 			<path type="enable">
 				<ctrl name="Speaker Playback Volume" value="26" />
 				<ctrl name="Speaker Playback Switch" value="on" />
-				<ctrl name="Receiver Playback Volume" value="31" />
+				<ctrl name="Receiver Playback Volume" value="26" />
 				<ctrl name="Receiver Playback Switch" value="on" />
 			</path>
 			<path type="disable">
