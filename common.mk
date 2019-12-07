@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
     vendor.lineage.livedisplay@2.0-service.samsung-exynos \
+    android.hardware.light@2.0-service.samsung \
     android.hardware.graphics.allocator@2.0-impl-exynos4 \
     android.hardware.graphics.mapper@2.0-impl-exynos4 \
     android.hardware.graphics.composer@2.1-impl \
@@ -106,8 +107,6 @@ PRODUCT_PACKAGES += \
     gralloc.exynos4 \
     hwcomposer.exynos4 \
     libnetcmdiface \
-    android.hardware.light@2.0-impl \
-    lights.smdk4210 \
     libhwconverter \
     libs5pjpeg \
     libfimg \
