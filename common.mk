@@ -135,11 +135,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl-legacy \
     camera.smdk4210 \
-    libstagefright-shim
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mediaserver.rc:system/etc/init/mediaserver.rc
-
+    libstagefright-shim \
+    mediaserver.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0 \
