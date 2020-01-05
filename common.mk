@@ -115,6 +115,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Camera2 \
     android.hardware.camera.provider@2.4-impl-legacy \
+    android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl-legacy \
     camera.smdk4210 \
     libstagefright-shim
