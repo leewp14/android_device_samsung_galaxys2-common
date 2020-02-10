@@ -68,8 +68,8 @@ PRODUCT_PACKAGES += \
     libsecril-shim
 
 # SamsungPowerHAL
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.smdk4210
+#PRODUCT_PACKAGES += \
+#    android.hardware.power@1.0-service.smdk4210
 
 # Battery
 PRODUCT_PROPERTY_OVERRIDES += \
