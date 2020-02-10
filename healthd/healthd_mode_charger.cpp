@@ -433,6 +433,7 @@ static void process_key(charger* charger, int code, int64_t now) {
                     property_set("sys.boot_from_charger_mode", "1");
                 } else {
                     if (charger->batt_anim->cur_level >= charger->boot_min_cap) {
+                        healthd_draw->blank_screen(true);
                         LOGW("[%" PRId64 "] rebooting\n", now);
                         reboot(RB_AUTOBOOT);
                     } else {
