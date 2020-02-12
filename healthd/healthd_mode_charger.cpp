@@ -425,23 +425,16 @@ static void process_key(charger* charger, int code, int64_t now) {
         if (key->down) {
             int64_t reboot_timeout = key->timestamp + POWER_ON_KEY_TIME;
             if (now >= reboot_timeout) {
-                /* We do not currently support booting from charger mode on
-                   all devices. Check the property and continue booting or reboot
-                   accordingly. */
-                if (property_get_bool("ro.enable_boot_charger_mode", false)) {
-                    LOGW("[%" PRId64 "] booting from charger mode\n", now);
-                    property_set("sys.boot_from_charger_mode", "1");
+                if (charger->batt_anim->cur_level >= charger->boot_min_cap) {
+                    healthd_draw->blank_screen(true);
+                    LOGW("[%" PRId64 "] rebooting\n", now);
+                    sync();
+                    reboot(RB_AUTOBOOT);
                 } else {
-                    if (charger->batt_anim->cur_level >= charger->boot_min_cap) {
-                        healthd_draw->blank_screen(true);
-                        LOGW("[%" PRId64 "] rebooting\n", now);
-                        reboot(RB_AUTOBOOT);
-                    } else {
-                        LOGV("[%" PRId64
-                             "] ignore power-button press, battery level "
-                             "less than minimum\n",
-                             now);
-                    }
+                    LOGV("[%" PRId64
+                         "] ignore power-button press, battery level "
+                         "less than minimum\n",
+                         now);
                 }
             } else {
                 /* if the key is pressed but timeout hasn't expired,
