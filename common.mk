@@ -182,6 +182,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000
 
+PRODUCT_PACKAGES += \
+    libsecril-client
+
 # Memory Optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.vendor.qti.am.reschedule_service=true \
