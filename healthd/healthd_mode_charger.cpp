@@ -428,7 +428,6 @@ static void process_key(charger* charger, int code, int64_t now) {
                 if (charger->batt_anim->cur_level >= charger->boot_min_cap) {
                     healthd_draw->blank_screen(true);
                     LOGW("[%" PRId64 "] rebooting\n", now);
-                    sync();
                     reboot(RB_AUTOBOOT);
                 } else {
                     LOGV("[%" PRId64
