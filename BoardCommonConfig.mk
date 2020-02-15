@@ -33,8 +33,8 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_64_BIT_BINDER := true
 
-BOARD_GLOBAL_CFLAGS += -Ofast -march=armv7-a -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp -funsafe-math-optimizations -frename-registers -funroll-loops -fopenmp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
-BOARD_GLOBAL_CPPFLAGS += -Ofast -march=armv7-a -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp -funsafe-math-optimizations -frename-registers -funroll-loops -fopenmp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
+BOARD_GLOBAL_CFLAGS += -Ofast -march=armv7-a+simd -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp -funsafe-math-optimizations -frename-registers -funroll-loops -fopenmp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
+BOARD_GLOBAL_CPPFLAGS += -Ofast -march=armv7-a+simd -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp -funsafe-math-optimizations -frename-registers -funroll-loops -fopenmp --param l1-cache-line-size=32 --param l1-cache-size=32 --param l2-cache-size=1024
 ARM_HAVE_NEON := true
 ARM_USE_PLD := true
 ARM_CACHE_LINE_SIZE := 32
