@@ -47,8 +47,7 @@ on post-fs-data
     insmod /vendor/lib/modules/Si4709_driver.ko
 
 # for backwards compatibility
-    mkdir /system/lib/modules 644 root root    
-    symlink /system/vendor/lib/modules /system/lib/modules
+    symlink /vendor/lib/modules /system/lib/modules
 
 # mount param.lfs
     mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs
