@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
 # Legacy RIL
 PRODUCT_PACKAGES += \
     libsamsung_symbols \
-    libsecril-shim
+    libsecril-shim \
+    libsecril-client
 
 # SamsungPowerHAL
 #PRODUCT_PACKAGES += \
@@ -182,9 +183,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000
 
-PRODUCT_PACKAGES += \
-    libsecril-client
-
 # Memory Optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.vendor.qti.am.reschedule_service=true \
@@ -222,6 +220,10 @@ PRODUCT_PACKAGES += \
     macloader \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
