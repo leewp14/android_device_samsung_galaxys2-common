@@ -485,6 +485,7 @@ static void handle_power_supply_state(charger* charger, int64_t now) {
             LOGW("[%" PRId64 "] device unplugged: shutting down in %" PRId64 " (@ %" PRId64 ")\n",
                  now, (int64_t)UNPLUGGED_SHUTDOWN_TIME, charger->next_pwr_check);
         } else if (now >= charger->next_pwr_check) {
+            healthd_draw->blank_screen(true);
             LOGW("[%" PRId64 "] shutting down\n", now);
             reboot(RB_POWER_OFF);
         } else {
