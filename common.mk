@@ -227,7 +227,8 @@ PRODUCT_PACKAGES += \
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    FMRadio
+    FMRadio \
+    libfmjni
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
