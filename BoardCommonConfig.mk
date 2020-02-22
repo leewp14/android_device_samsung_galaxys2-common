@@ -91,6 +91,7 @@ BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw \
 BOARD_EGL_CFG := device/samsung/galaxys2-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400U
 
 # FIMG Acceleration
 BOARD_USES_FIMGAPI := true
