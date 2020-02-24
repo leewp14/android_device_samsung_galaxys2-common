@@ -15,8 +15,7 @@
 #
 COMMON_PATH := device/samsung/galaxys2-common
 
-DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 
 # Rootdir
 PRODUCT_COPY_FILES := \
