@@ -206,10 +206,6 @@ PRODUCT_PACKAGES += \
     fsck.f2fs \
     mkfs.f2fs
 
-# Legacy WallpaperPicker
-PRODUCT_PACKAGES += \
-     WallpaperPicker
-
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
