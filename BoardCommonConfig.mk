@@ -82,8 +82,8 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_RELEASETOOLS_EXTENSIONS := ./device/samsung/galaxys2-common
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw \
-    device/samsung/galaxys2-common/lineagehw
+#BOARD_HARDWARE_CLASS := hardware/samsung/cmhw \
+#    device/samsung/galaxys2-common/cmhw
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/galaxys2-common/configs/egl.cfg
