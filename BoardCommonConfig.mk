@@ -133,6 +133,7 @@ BOARD_USE_YAMAHA_MC1N2_AUDIO := true
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6260
 BOARD_RIL_CLASS := ../../../device/samsung/galaxys2-common/ril
+TARGET_USES_OLD_MNC_FORMAT := true
 
 # Camera
 BOARD_CAMERA_HAVE_ISO := true
