@@ -275,5 +275,8 @@ $(call inherit-product, $(LOCAL_PATH)/go_galaxys2-common.mk)
 # Apply Dalvik config for 1G phone
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+# Include props
+$(call inherit-product, device/samsung/galaxys2-common/system_prop.mk)
+
 # Include debugging props
 $(call inherit-product, device/samsung/galaxys2-common/system_prop_debug.mk)
