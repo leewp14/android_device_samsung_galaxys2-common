@@ -224,6 +224,7 @@ on post-fs-data
     chown system media_rw /sys/class/lcd/panel/gamma_mode
     chown system media_rw /sys/class/lcd/panel/power_reduce
     chown system system /sys/class/backlight/panel/auto_brightness
+    write /sys/class/lcd/panel/power_reduce 1
 
     # Permissions for mDNIe
     chown system media_rw /sys/class/mdnie/mdnie/mode
