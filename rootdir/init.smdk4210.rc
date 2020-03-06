@@ -295,7 +295,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
     # Touchkeys
-    write /sys/devices/virtual/sec/sec_touchkey/touchkey_led_on_keypress 1
+#    write /sys/devices/virtual/sec/sec_touchkey/touchkey_led_on_keypress 1
 
     # Enable LED-notification via BLN
 #    write /sys/devices/virtual/misc/backlightnotification/enabled 1
