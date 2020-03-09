@@ -8,3 +8,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.renderer=opengl
+
+# SurfaceFlinger
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1
