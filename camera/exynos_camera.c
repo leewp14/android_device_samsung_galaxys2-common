@@ -603,24 +603,25 @@ int exynos_camera_params_set_focus_mode(struct exynos_camera *exynos_camera, int
 	focus_mode_string = exynos_param_string_get(exynos_camera, "focus-mode");
 	if (focus_mode_string != NULL) {
 		if (focus_mode == 0) {
-			if (strcmp(focus_mode_string, "auto") == 0)
+			if (strcmp(focus_mode_string, "auto") == 0){
 				// force auto focus to continous
 				focus_mode = FOCUS_MODE_CONTINOUS;
 				exynos_camera->focus_mode = focus_mode;
-			else if (strcmp(focus_mode_string, "infinity") == 0)
+			}else if (strcmp(focus_mode_string, "infinity") == 0){
 				focus_mode = FOCUS_MODE_INFINITY;
-			else if (strcmp(focus_mode_string, "macro") == 0)
+			}else if (strcmp(focus_mode_string, "macro") == 0){
 				focus_mode = FOCUS_MODE_MACRO;
-			else if (strcmp(focus_mode_string, "fixed") == 0)
+			}else if (strcmp(focus_mode_string, "fixed") == 0){
 				focus_mode = FOCUS_MODE_FIXED;
-			else if (strcmp(focus_mode_string, "facedetect") == 0)
+			}else if (strcmp(focus_mode_string, "facedetect") == 0){
 				focus_mode = FOCUS_MODE_FACEDETECT;
-			else if (strcmp(focus_mode_string, "continuous-video") == 0)
+			}else if (strcmp(focus_mode_string, "continuous-video") == 0){
 				focus_mode = FOCUS_MODE_CONTINOUS;
-			else if (strcmp(focus_mode_string, "continuous-picture") == 0)
+			}else if (strcmp(focus_mode_string, "continuous-picture") == 0){
 				focus_mode = FOCUS_MODE_CONTINOUS;
-			else
+			}else{
 				focus_mode = FOCUS_MODE_AUTO;
+			}
 		}
 
 		if (focus_mode != exynos_camera->focus_mode || force) {
