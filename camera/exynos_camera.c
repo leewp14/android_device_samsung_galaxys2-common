@@ -604,7 +604,9 @@ int exynos_camera_params_set_focus_mode(struct exynos_camera *exynos_camera, int
 	if (focus_mode_string != NULL) {
 		if (focus_mode == 0) {
 			if (strcmp(focus_mode_string, "auto") == 0)
-				focus_mode = FOCUS_MODE_AUTO;
+				// force auto focus to continous
+				focus_mode = FOCUS_MODE_CONTINOUS;
+				exynos_camera->focus_mode = focus_mode;
 			else if (strcmp(focus_mode_string, "infinity") == 0)
 				focus_mode = FOCUS_MODE_INFINITY;
 			else if (strcmp(focus_mode_string, "macro") == 0)
