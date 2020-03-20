@@ -75,8 +75,7 @@ PRODUCT_PACKAGES += \
 # Legacy RIL
 PRODUCT_PACKAGES += \
     libsamsung_symbols \
-    libsecril-shim \
-    libsecril-client
+    libsecril-shim
 
 # SamsungPowerHAL
 #PRODUCT_PACKAGES += \
