@@ -19,6 +19,3 @@
 # recovery
 /dev/block/platform/dw_mmc/by-name/KERNEL	/boot		emmc	defaults								recoveryonly
 /dev/block/platform/dw_mmc/by-name/RECOVERY	/recovery	emmc	defaults								recoveryonly
-
-# swap
-/dev/block/platform/dw_mmc/by-name/UMS		none		swap	defaults,discard							defaults

@@ -1,0 +1,41 @@
+# Android fstab file.
+#<src>                                      <mnt_point>             <type>    <mnt_flags and options>                                   <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+# data partition must be located at the bottom for supporting device encryption
+
+# swap
+#/dev/block/platform/dw_mmc/by-name/UMS		none		swap	defaults,discard							defaults
+#/dev/block/zram0				none		swap	defaults								zramsize=67108864
+
+
+
+# NOTE:
+#
+#    I have discovered that by disabling zRAM, the system has more performance under 
+#    certain conditions. Thus, I move out the swap fstab file to a seperate location, 
+#    so you can edit the swap configuration according to your needs. 
+#
+#    There are 3 configuration methods: 
+#    1. No SWAP (default)
+#         Basically what it means: no virtual memory - only physical RAM. 
+#         Only recommended for light users without installing GAPPS. 
+#
+#    2. zRAM (/dev/block/zram0)
+#         This is the default configuration before I decided to disable zRAM. 
+#         zRAM works such that it allocates part of your RAM as a compressed
+#         RAM region. In short, zRAM trades some CPU load for more memory. 
+#         You can configure the zRAM size by changing zramsize=xxx, 
+#         where xxx is the size of zRAM in bytes. 
+#         A recommended zRAM size is around 20-30% of your total physical RAM. 
+#
+#    3. Physical SWAP (/dev/block/platform/dw_mmc/by-name/UMS)
+#         This is an approach that I come up with in order to get rid of zRAM. 
+#         However, the downside of this approach is an increase in memory wear. 
+#         My default configuration is to use the internal SD card partition
+#         (sdcard0) that has been left unused since migrating to emulated storage. 
+#         Due to concerns on the wear of internal eMMC, I decided not to make this
+#         change permanent, and thus allowing users to choose their preferred
+#         SWAP configuration. 
+#
+#
