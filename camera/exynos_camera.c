@@ -75,7 +75,7 @@ struct exynos_camera_preset exynos_camera_presets_galaxys2[] = {
 			.jpeg_thumbnail_width = 320,
 			.jpeg_thumbnail_height = 240,
 			.jpeg_thumbnail_quality = 100,
-			.jpeg_quality = 100,
+			.jpeg_quality = 90,
 
 			.video_snapshot_supported = 0,
 			.full_video_snap_supported = 0,
@@ -148,7 +148,7 @@ struct exynos_camera_preset exynos_camera_presets_galaxys2[] = {
 			.jpeg_thumbnail_width = 160,
 			.jpeg_thumbnail_height = 120,
 			.jpeg_thumbnail_quality = 100,
-			.jpeg_quality = 100,
+			.jpeg_quality = 90,
 
 			.video_snapshot_supported = 0,
 			.full_video_snap_supported = 0,
