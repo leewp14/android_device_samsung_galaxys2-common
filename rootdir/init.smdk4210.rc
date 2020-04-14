@@ -40,6 +40,8 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
+    chown wifi root /dev/rfkill
+
     # for WIFI TRP/TIS
     write /data/.psm.info 1
     chown system root /data/.psm.info
