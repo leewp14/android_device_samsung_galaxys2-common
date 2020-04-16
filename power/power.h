@@ -71,8 +71,8 @@ typedef struct governor_settings {
 
 static power_profile profiles[PROFILE_MAX] = {
     [PROFILE_POWER_SAVE] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .max_freq = 600000,
@@ -94,8 +94,8 @@ static power_profile profiles[PROFILE_MAX] = {
         .launch_boost_time = 0,
     },
     [PROFILE_BALANCED] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .min_freq = 100000,
@@ -117,8 +117,8 @@ static power_profile profiles[PROFILE_MAX] = {
         .launch_boost_time = 2000 * (MS_TO_NS),
     },
     [PROFILE_PERFORMANCE] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .min_freq = 1200000,
@@ -145,15 +145,15 @@ static power_profile profiles[PROFILE_MAX] = {
 // boosting as it (should) only occur while the screen is on
 static power_profile profiles_low_power[PROFILE_MAX] = {
     [PROFILE_POWER_SAVE] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .max_freq = 400000,
         .min_freq = -1,
         .up_threshold = 95,
         .up_threshold_at_min_freq = 40,
-        .freq_for_responsiveness = 100000,
+        .freq_for_responsiveness = 200000,
         .freq_step = 9,
         .down_differential = 5,
         .min_cpu_lock = 0,
@@ -168,8 +168,8 @@ static power_profile profiles_low_power[PROFILE_MAX] = {
         .launch_boost_time = 0,
     },
     [PROFILE_BALANCED] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .min_freq = 100000,
@@ -191,8 +191,8 @@ static power_profile profiles_low_power[PROFILE_MAX] = {
         .launch_boost_time = 0,
     },
     [PROFILE_PERFORMANCE] = {
-        .hotplug_freq_1_1 = 400000,
-        .hotplug_freq_2_0 = 300000,
+        .hotplug_freq_1_1 = 500000,
+        .hotplug_freq_2_0 = 200000,
         .hotplug_rq_1_1 = 300,
         .hotplug_rq_2_0 = 250,
         .min_freq = 1200000,
