@@ -325,7 +325,7 @@ on boot
     write /proc/sys/vm/page-cluster 0
 
 # For RIL
-service cpboot-daemon /system/bin/cbd -d -p 8
+service cpboot-daemon /vendor/bin/cbd -d -p 8
     class main
     user root
     group radio cache inet misc audio sdcard_rw log
